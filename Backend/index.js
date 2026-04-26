@@ -23,11 +23,11 @@ let db;
 (async () => {
   try {
     db = await mysql.createConnection({
-      host: process.env.MYSQLHOST,
-      user: process.env.MYSQLUSER,
-      password: process.env.MYSQLPASSWORD,
-      database: process.env.MYSQLDATABASE,
-      port: process.env.MYSQLPORT
+      host: process.env.MYSQL_HOST,          // ✅ FIXED
+      user: process.env.MYSQL_USER,          // ✅ FIXED
+      password: process.env.MYSQL_PASSWORD,  // ✅ FIXED
+      database: process.env.MYSQL_DATABASE,  // ✅ FIXED
+      port: process.env.MYSQL_PORT           // ✅ FIXED
     });
 
     await db.query(`
@@ -46,7 +46,7 @@ let db;
 
   } catch (err) {
     console.log("❌ DB ERROR:", err.message);
-    db = null; // 🔥 IMPORTANT (crash avoid)
+    db = null;
   }
 })();
 
@@ -97,7 +97,7 @@ app.post("/predict", upload.single("image"), async (req, res) => {
     const product_name = null;
 
     // ================= SAVE =================
-    if (db) {   // 🔥 IMPORTANT FIX
+    if (db) {
       await db.query(
         `INSERT INTO results 
         (image, predicted_class, product_name, freshness, confidence)
