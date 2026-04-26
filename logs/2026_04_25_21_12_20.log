@@ -1,0 +1,5 @@
+[2026-04-25 21:12:21,050] INFO - Model loaded from artifacts/model.h5
+[2026-04-25 21:12:21,050] INFO - Model loaded successfully
+[2026-04-25 21:12:21,051] INFO - Starting Flask API server
+[2026-04-25 21:12:21,063] WARNING -  * Debugger is active!
+[2026-04-25 21:12:21,066] INFO -  * Debugger PIN: 121-493-725

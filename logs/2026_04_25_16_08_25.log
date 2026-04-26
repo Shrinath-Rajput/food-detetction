@@ -1,0 +1,4 @@
+[2026-04-25 16:08:25,948] INFO - Starting data ingestion for food freshness dataset
+[2026-04-25 16:08:25,948] INFO - Processing class: freshapples
+[2026-04-25 16:08:46,136] INFO - dataset\Train\freshapples \u2192 Train: 1939, Test: 485
+[2026-04-25 16:08:46,137] INFO - Processing class: freshbanana

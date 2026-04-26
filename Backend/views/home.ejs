@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Freshness Classification</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Navbar Styling */
+    .navbar-professional {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar-professional .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white !important;
+      margin-right: 3rem;
+    }
+
+    .navbar-professional .nav-link {
+      color: rgba(255, 255, 255, 0.85) !important;
+      font-weight: 500;
+      margin: 0 10px;
+      padding: 8px 16px !important;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    .navbar-professional .nav-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: white !important;
+    }
+
+    .navbar-professional .nav-link.active {
+      background: rgba(255, 255, 255, 0.3);
+      color: white !important;
+      border-bottom: 2px solid white;
+    }
+
+    .navbar-professional .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .navbar-professional .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar-nav {
+      margin-left: auto;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-top: 80px;
+    }
+
+    .hero-section {
+      width: 100%;
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      animation: slideDown 0.8s ease;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      opacity: 0.95;
+      animation: slideUp 0.8s ease 0.2s both;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+      animation: fadeIn 0.8s ease 0.4s both;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      color: #667eea;
+      margin-bottom: 15px;
+    }
+
+    .feature-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .feature-desc {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .btn-primary-custom {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      margin: 10px;
+      color: white;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      animation: fadeIn 0.8s ease 0.6s both;
+    }
+
+    .btn-primary-custom:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+      color: white;
+      text-decoration: none;
+    }
+
+    .stats-section {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 40px;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-top: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-professional">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand text-white" href="/">
+      <i class="fas fa-apple-alt"></i> Food AI
+    </a>
+
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/prediction">Predict</a>
+      <a class="nav-link" href="/dashboard">Dashboard</a>
+      <a class="nav-link active" href="/analytics">Analytics</a>
+    </div>
+  </div>
+</nav>
+
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <i class="fas fa-apple-alt"></i> Food Freshness Classifier
+      </h1>
+      <p class="hero-subtitle">
+        Advanced AI-powered system to detect fresh and rotten produce with high accuracy
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="feature-title">AI-Powered Detection</div>
+          <div class="feature-desc">
+            Uses deep learning CNN models to accurately classify food freshness
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="feature-title">Real-Time Processing</div>
+          <div class="feature-desc">
+            Get instant predictions within seconds of uploading an image
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <div class="feature-title">Analytics Dashboard</div>
+          <div class="feature-desc">
+            Track prediction history and view detailed statistics
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="feature-title">Mobile Friendly</div>
+          <div class="feature-desc">
+            Works seamlessly on all devices - desktop, tablet, and mobile
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="feature-title">Multi-Produce Support</div>
+          <div class="feature-desc">
+            Classifies 9+ types of fruits and vegetables
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="feature-title">Data Management</div>
+          <div class="feature-desc">
+            All predictions are stored and accessible for future reference
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="/prediction" class="btn-primary-custom">
+          <i class="fas fa-camera"></i> Start Classifying
+        </a>
+        <a href="/dashboard" class="btn-primary-custom">
+          <i class="fas fa-chart-pie"></i> View Dashboard
+        </a>
+        <a href="/records" class="btn-primary-custom">
+          <i class="fas fa-history"></i> View Records
+        </a>
+      </div>
+
+      <div class="stats-section" id="statsSection">
+        <h3 style="margin-bottom: 30px;">System Statistics</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+          <div class="stat-item">
+            <span class="stat-number" id="totalPredictions">0</span>
+            <span class="stat-label">Total Predictions</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="uniqueClasses">0</span>
+            <span class="stat-label">Unique Classes</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="avgConfidence">0%</span>
+            <span class="stat-label">Average Confidence</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Load stats on page load
+    fetch('/api/stats')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          document.getElementById('totalPredictions').textContent = data.stats.total_predictions || 0;
+          document.getElementById('uniqueClasses').textContent = data.stats.unique_classes || 0;
+          document.getElementById('avgConfidence').textContent = 
+            Math.round((data.stats.avg_confidence || 0) * 100) + '%';
+        }
+      })
+      .catch(err => console.error('Error loading stats:', err));
+  </script>
+</body>
+</html>

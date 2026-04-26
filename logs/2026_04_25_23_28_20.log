@@ -1,0 +1,14 @@
+[2026-04-25 23:28:25,986] INFO - Model loaded from artifacts/model.h5
+[2026-04-25 23:28:25,987] INFO - \u2713 Model loaded successfully
+[2026-04-25 23:28:26,006] INFO - ============================================================
+[2026-04-25 23:28:26,007] INFO - FOOD FRESHNESS CLASSIFICATION API
+[2026-04-25 23:28:26,007] INFO - ============================================================
+[2026-04-25 23:28:26,007] INFO - Model Status: \u2713 Loaded
+[2026-04-25 23:28:26,007] INFO - Total Classes: 18
+[2026-04-25 23:28:26,007] INFO - Upload Folder: D:\e drive\Only_Project\Food freshness classification from visual features\uploads
+[2026-04-25 23:28:26,008] INFO - Max File Size: 10MB
+[2026-04-25 23:28:26,008] INFO - ============================================================
+[2026-04-25 23:28:26,010] INFO - Starting Flask API server...
+[2026-04-25 23:28:26,272] WARNING -  * Debugger is active!
+[2026-04-25 23:28:26,309] INFO -  * Debugger PIN: 121-493-725
+[2026-04-26 08:05:41,114] INFO -  * Detected change in 'D:\\e drive\\Only_Project\\Food freshness classification from visual features\\app.py', reloading

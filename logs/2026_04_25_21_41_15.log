@@ -1,0 +1,5 @@
+[2026-04-25 21:41:15,272] ERROR - Failed to load model: Error occurred in python script name [D:\e drive\Only_Project\Food freshness classification from visual features\src\Pipeline\predict_pipeline.py] line number [15] error message [Model not found at artifacts/model.h5]
+[2026-04-25 21:41:15,273] INFO - Starting Flask API server
+[2026-04-25 21:41:15,284] WARNING -  * Debugger is active!
+[2026-04-25 21:41:15,286] INFO -  * Debugger PIN: 121-493-725
+[2026-04-25 21:54:00,533] INFO -  * Detected change in 'D:\\e drive\\Only_Project\\Food freshness classification from visual features\\app.py', reloading

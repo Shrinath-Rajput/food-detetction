@@ -1,0 +1,6 @@
+[2026-04-26 12:23:17,536] INFO - Model loaded from artifacts/model.h5
+[2026-04-26 12:23:17,558] WARNING -  * Debugger is active!
+[2026-04-26 12:23:17,561] INFO -  * Debugger PIN: 121-493-725
+[2026-04-26 12:23:56,543] INFO - 127.0.0.1 - - [26/Apr/2026 12:23:56] "[33mGET / HTTP/1.1[0m" 404 -
+[2026-04-26 12:26:00,972] INFO - 127.0.0.1 - - [26/Apr/2026 12:26:00] "GET /api/health HTTP/1.1" 200 -
+[2026-04-26 12:26:28,140] INFO -  * Detected change in 'D:\\e drive\\Only_Project\\Ann Classification project\\venu\\Lib\\site-packages\\keras\\engine\\training.py', reloading

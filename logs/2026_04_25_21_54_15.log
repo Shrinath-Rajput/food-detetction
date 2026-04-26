@@ -1,0 +1,13 @@
+[2026-04-25 21:54:15,811] WARNING - Model file not found at artifacts/model.h5
+[2026-04-25 21:54:15,813] INFO - ============================================================
+[2026-04-25 21:54:15,814] INFO - FOOD FRESHNESS CLASSIFICATION API
+[2026-04-25 21:54:15,814] INFO - ============================================================
+[2026-04-25 21:54:15,814] INFO - Model Status: \u2717 Not Loaded
+[2026-04-25 21:54:15,814] INFO - Total Classes: 18
+[2026-04-25 21:54:15,814] INFO - Upload Folder: D:\e drive\Only_Project\Food freshness classification from visual features\uploads
+[2026-04-25 21:54:15,814] INFO - Max File Size: 10MB
+[2026-04-25 21:54:15,814] INFO - ============================================================
+[2026-04-25 21:54:15,817] INFO - Starting Flask API server...
+[2026-04-25 21:54:15,852] WARNING -  * Debugger is active!
+[2026-04-25 21:54:15,857] INFO -  * Debugger PIN: 121-493-725
+[2026-04-25 21:54:17,918] INFO -  * Detected change in 'D:\\e drive\\Only_Project\\Ann Classification project\\venu\\Lib\\site-packages\\joblib\\backports.py', reloading

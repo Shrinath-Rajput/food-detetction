@@ -1,0 +1,28 @@
+[2026-04-26 08:21:30,131] INFO - Model loaded from artifacts/model.h5
+[2026-04-26 08:21:30,131] INFO - \u2713 Model loaded successfully
+[2026-04-26 08:21:30,132] INFO - Model loaded from artifacts/model.h5
+[2026-04-26 08:21:30,132] INFO - \u2713 Model loaded successfully
+[2026-04-26 08:21:30,133] INFO - ============================================================
+[2026-04-26 08:21:30,133] INFO - FOOD FRESHNESS CLASSIFICATION API
+[2026-04-26 08:21:30,133] INFO - ============================================================
+[2026-04-26 08:21:30,133] INFO - Model Status: \u2713 Loaded
+[2026-04-26 08:21:30,133] INFO - Total Classes: 18
+[2026-04-26 08:21:30,133] INFO - Upload Folder: D:\e drive\Only_Project\Food freshness classification from visual features\uploads
+[2026-04-26 08:21:30,135] INFO - ============================================================
+[2026-04-26 08:21:30,138] INFO - Max File Size: 10MB
+[2026-04-26 08:21:30,138] INFO - FOOD FRESHNESS CLASSIFICATION API
+[2026-04-26 08:21:30,138] INFO - ============================================================
+[2026-04-26 08:21:30,138] INFO - ============================================================
+[2026-04-26 08:21:30,138] INFO - Starting Flask API server...
+[2026-04-26 08:21:30,138] INFO - Model Status: \u2713 Loaded
+[2026-04-26 08:21:30,138] INFO - Total Classes: 18
+[2026-04-26 08:21:30,138] INFO - Upload Folder: D:\e drive\Only_Project\Food freshness classification from visual features\uploads
+[2026-04-26 08:21:30,138] INFO - Max File Size: 10MB
+[2026-04-26 08:21:30,138] INFO - ============================================================
+[2026-04-26 08:21:30,138] INFO - Starting Flask API server...
+[2026-04-26 08:21:30,155] WARNING -  * Debugger is active!
+[2026-04-26 08:21:30,157] WARNING -  * Debugger is active!
+[2026-04-26 08:21:30,159] INFO -  * Debugger PIN: 121-493-725
+[2026-04-26 08:21:30,159] INFO -  * Debugger PIN: 121-493-725
+[2026-04-26 08:49:53,006] INFO -  * Detected change in 'D:\\e drive\\Only_Project\\Ann Classification project\\venu\\Lib\\site-packages\\werkzeug\\exceptions.py', reloading
+[2026-04-26 08:49:53,006] INFO -  * Detected change in 'D:\\e drive\\Only_Project\\Ann Classification project\\venu\\Lib\\site-packages\\werkzeug\\exceptions.py', reloading

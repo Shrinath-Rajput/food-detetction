@@ -1,0 +1,10 @@
+[2026-04-26 12:23:13,273] INFO - Model loaded from artifacts/model.h5
+[2026-04-26 12:23:13,308] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+[2026-04-26 12:23:13,308] INFO - [33mPress CTRL+C to quit[0m
+[2026-04-26 12:23:13,325] INFO -  * Restarting with watchdog (windowsapi)
+[2026-04-26 12:26:28,509] INFO -  * Restarting with watchdog (windowsapi)
+[2026-04-26 12:28:10,466] INFO -  * Restarting with watchdog (windowsapi)
+[2026-04-26 12:28:40,390] INFO -  * Restarting with watchdog (windowsapi)
+[2026-04-26 12:30:49,627] INFO -  * Restarting with watchdog (windowsapi)
+[2026-04-26 12:31:02,163] INFO -  * Restarting with watchdog (windowsapi)

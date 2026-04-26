@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding-top: 80px;
+  color: white;
+}
+
+.navbar-professional {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-professional .nav-link {
+  color: white !important;
+  margin: 0 10px;
+}
+
+.dashboard-box {
+  background: rgba(255,255,255,0.95);
+  border-radius: 15px;
+  padding: 30px;
+  color: black;
+}
+
+.table {
+  background: white;
+}
+
+.badge-fresh {
+  background: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.badge-rotten {
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-professional">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand text-white" href="/">
+      <i class="fas fa-apple-alt"></i> Food AI
+    </a>
+
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/prediction">Predict</a>
+      <a class="nav-link active" href="/dashboard">Dashboard</a>
+      <a class="nav-link" href="/analytics">Analytics</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+
+<h2 class="mb-4 text-white">
+  <i class="fas fa-chart-bar"></i> Dashboard
+</h2>
+
+<div class="dashboard-box">
+
+<table class="table table-bordered text-center">
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Product</th>
+  <th>Status</th>
+  <th>Confidence</th>
+  <th>Date</th>
+  <th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+<% data.forEach(record => { %>
+<tr>
+
+  <td><%= record.id %></td>
+
+  <!-- PRODUCT REMOVE -->
+  <td>N/A</td>
+
+  <!-- 🔥 ONLY FRESH / ROTTEN -->
+  <td>
+    <% if(record.freshness === "Fresh"){ %>
+      <span class="badge-fresh">Fresh</span>
+    <% } else { %>
+      <span class="badge-rotten">Rotten</span>
+    <% } %>
+  </td>
+
+  <td><%= (record.confidence * 100).toFixed(1) %>%</td>
+
+  <td><%= record.created_at %></td>
+
+  <td>
+    <form action="/delete/<%= record.id %>" method="POST">
+      <button class="btn btn-danger btn-sm">
+        <i class="fas fa-trash"></i>
+      </button>
+    </form>
+  </td>
+
+</tr>
+<% }) %>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</body>
+</html>

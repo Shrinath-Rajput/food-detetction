@@ -1,0 +1,37 @@
+[2026-04-25 16:28:28,293] INFO - Starting data ingestion for food freshness dataset
+[2026-04-25 16:28:28,293] INFO - Processing class: freshapples
+[2026-04-25 16:28:43,662] INFO - dataset\Train\freshapples \u2192 Train: 1939, Test: 485
+[2026-04-25 16:28:43,662] INFO - Processing class: freshbanana
+[2026-04-25 16:28:49,373] INFO - dataset\Train\freshbanana \u2192 Train: 1974, Test: 494
+[2026-04-25 16:28:49,373] INFO - Processing class: freshbittergroud
+[2026-04-25 16:28:51,695] INFO - dataset\Train\freshbittergroud \u2192 Train: 261, Test: 66
+[2026-04-25 16:28:51,696] INFO - Processing class: freshcapsicum
+[2026-04-25 16:28:58,517] INFO - dataset\Train\freshcapsicum \u2192 Train: 792, Test: 198
+[2026-04-25 16:28:58,518] INFO - Processing class: freshcucumber
+[2026-04-25 16:29:02,100] INFO - dataset\Train\freshcucumber \u2192 Train: 396, Test: 100
+[2026-04-25 16:29:02,100] INFO - Processing class: freshokra
+[2026-04-25 16:29:06,613] INFO - dataset\Train\freshokra \u2192 Train: 508, Test: 127
+[2026-04-25 16:29:06,613] INFO - Processing class: freshoranges
+[2026-04-25 16:29:18,580] INFO - dataset\Train\freshoranges \u2192 Train: 1172, Test: 294
+[2026-04-25 16:29:18,580] INFO - Processing class: freshpotato
+[2026-04-25 16:29:22,618] INFO - dataset\Train\freshpotato \u2192 Train: 428, Test: 108
+[2026-04-25 16:29:22,618] INFO - Processing class: freshtomato
+[2026-04-25 16:29:38,946] INFO - dataset\Train\freshtomato \u2192 Train: 1486, Test: 372
+[2026-04-25 16:29:38,946] INFO - Processing class: rottenapples
+[2026-04-25 16:30:23,680] INFO - dataset\Train\rottenapples \u2192 Train: 2598, Test: 650
+[2026-04-25 16:30:23,681] INFO - Processing class: rottenbanana
+[2026-04-25 16:31:05,685] INFO - dataset\Train\rottenbanana \u2192 Train: 2345, Test: 587
+[2026-04-25 16:31:05,686] INFO - Processing class: rottenbittergroud
+[2026-04-25 16:31:13,982] INFO - dataset\Train\rottenbittergroud \u2192 Train: 285, Test: 72
+[2026-04-25 16:31:13,982] INFO - Processing class: rottencapsicum
+[2026-04-25 16:31:27,824] INFO - dataset\Train\rottencapsicum \u2192 Train: 720, Test: 181
+[2026-04-25 16:31:27,824] INFO - Processing class: rottencucumber
+[2026-04-25 16:31:33,981] INFO - dataset\Train\rottencucumber \u2192 Train: 336, Test: 85
+[2026-04-25 16:31:33,981] INFO - Processing class: rottenokra
+[2026-04-25 16:31:38,218] INFO - dataset\Train\rottenokra \u2192 Train: 270, Test: 68
+[2026-04-25 16:31:38,219] INFO - Processing class: rottenoranges
+[2026-04-25 16:31:43,257] INFO - dataset\Train\rottenoranges \u2192 Train: 297, Test: 75
+[2026-04-25 16:31:43,257] INFO - Data ingestion completed successfully
+[2026-04-25 16:31:43,257] INFO - Starting data transformation
+[2026-04-25 16:31:43,258] INFO - Classes found: ['freshapples', 'freshbanana', 'freshbittergroud', 'freshcapsicum', 'freshcucumber', 'freshokra', 'freshoranges', 'freshpotato', 'freshtomato', 'rottenapples', 'rottenbanana', 'rottenbittergroud', 'rottencapsicum', 'rottencucumber', 'rottenokra', 'rottenoranges']
+[2026-04-25 16:31:44,477] INFO - Data transformation completed
