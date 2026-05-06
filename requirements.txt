@@ -38,3 +38,6 @@ requests==2.31.0
 # Development
 python-dateutil==2.8.2
 pytz==2023.3
+setuptools
+wheel
+gunicorn
