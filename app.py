@@ -20,9 +20,11 @@ MODEL_PATH = os.path.join(
     "model.tflite"
 )
 
+print(f"✅ Flask app initializing...")
 print(f"🔥 BASE_DIR: {BASE_DIR}")
 print(f"🔥 MODEL_PATH: {MODEL_PATH}")
 print(f"🔥 Model exists: {os.path.exists(MODEL_PATH)}")
+print(f"✅ App will load model on first request (lazy loading)")
 
 # ================= GLOBAL PREDICTOR (LAZY LOADED) =================
 predictor = None
